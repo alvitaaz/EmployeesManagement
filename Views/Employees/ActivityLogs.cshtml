@@ -1,0 +1,41 @@
+﻿@model IEnumerable<EmployeesManagement.Models.ActivityLog>
+
+@{
+    ViewData["Title"] = "Activity Logs";
+}
+
+<h1>Activity Logs</h1>
+
+<p>
+    <a asp-controller="Employees" asp-action="Index" class="btn btn-secondary">Back to Employee List</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Action)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Details)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().IPAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().ActionTimes)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Action)</td>
+                <td>@Html.DisplayFor(modelItem => item.Details)</td>
+                <td>@Html.DisplayFor(modelItem => item.IPAddress)</td>
+                <td>@Html.DisplayFor(modelItem => item.ActionTimes)</td>
+            </tr>
+        }
+    </tbody>
+</table>

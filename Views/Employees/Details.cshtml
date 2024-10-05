@@ -1,0 +1,56 @@
+﻿@model EmployeesManagement.Models.Employee
+
+@{
+    ViewData["Title"] = "Details"; 
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">Employee Details</h1> 
+
+    <div class="card mt-4">
+        <!-- card buat menampilkan detail karyawan -->
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Employee Information</h4> 
+        </div>
+        <div class="card-body">
+            <!-- isi dari card -->
+            <dl class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.MidleName)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.MidleName)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.EmailAddress)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.EmailAddress)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </dt>
+                <dd class="col-sm-9">                  
+                    @Html.DisplayFor(model => model.PhoneNumber)
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="mt-3 text-center">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Edit</a> 
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a> 
+    </div>
+</div>
