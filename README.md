@@ -24,7 +24,7 @@ The Employee Management Application is a web-based system built using ASP.NET an
 - **ASP.NET Core**: The framework used to build this web application.
 - **Entity Framework Core**: Used for data access and database management.
 - **SQL Server**: The database management system to store employee data and activity logs.
-- **HTML/CSS/Bootstrap**: For responsive and attractive user interface design.
+- **HTML/CSS/Bootstrap/JavaScript**: For responsive and attractive user interface design, as well as adding interactivity and dynamic features to the web application.
 
 ## Application Benefits
 This application helps organizations manage employee data efficiently, allowing for quick searches and maintaining activity records for transparency and accountability. With an easy-to-use interface, the application is designed to facilitate users in their daily tasks related to employee management.
