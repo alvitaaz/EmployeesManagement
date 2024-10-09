@@ -7,6 +7,7 @@
 <h1>Activity Logs</h1>
 
 <p>
+ <!-- button buat kembali ke daftar karyawan -->
     <a asp-controller="Employees" asp-action="Index" class="btn btn-secondary">Back to Employee List</a>
 </p>
 
@@ -28,7 +29,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var item in Model) // ini loop untuk setiap item dalam model
         {
             <tr>
                 <td>@Html.DisplayFor(modelItem => item.Action)</td>
