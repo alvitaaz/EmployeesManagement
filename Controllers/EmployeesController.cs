@@ -110,7 +110,7 @@ namespace EmployeesManagement.Views
                     _context.Update(employee);
                     await _context.SaveChangesAsync();
 
-                    // log activity: mencatat perubahan data karyawan
+                    // log activity: buat mencatat perubahan data karyawan
                     await LogActivity("Update Employee", $"Updated {employee.FirstName} {employee.LastName}");
                 }
                 catch (DbUpdateConcurrencyException)
@@ -157,7 +157,7 @@ namespace EmployeesManagement.Views
             {
                 _context.Employees.Remove(employee);
 
-                // Log activity: mencatat penghapusan data karyawan
+                // log activity: mencatat penghapusan data karyawan
                 await LogActivity("Delete Employee", $"Deleted {employee.FirstName} {employee.LastName}");
             }
 
@@ -172,7 +172,7 @@ namespace EmployeesManagement.Views
             {
                 Action = action,
                 Details = details,
-                IPAddress = GetUserIpAddress(),  // mendapatkan IP Address pengguna
+                IPAddress = GetUserIpAddress(),  // get IP Address pengguna
                 ActionTimes = DateTime.Now 
             };
 
